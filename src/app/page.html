@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../styles/global.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"></script>
+   <title>Require Page</title>
+</head>
+
+<body>
+   <header class="header min-w-screen">
+      <img src="../assets/Logo.jpg" alt="logo" class="object-cover w-[100%]">
+      <!-- mobile -->
+      <nav class="xl:hidden nav">
+         <div class="h-10 xl:hidden">
+            <img src="../assets/menu.png" alt="menu-icon" class=" p-1 h-[100%]  cursor-pointer" id="menu-icon">
+            <img src="../assets/close.png" alt="close" class=" p-1 h-[100%]  cursor-pointer hidden" id="close-icon">
+         </div>
+         <div class="hidden container mx-auto space-y-4 p-5" id="responsive-mobile-menu">
+            <ul id="list-menu-mobile" class="list-menu-responsive space-y-2">
+            </ul>
+            <div class="group-search relative ">
+               <input class="w-[100%] xl:w-72  pl-3 h-10 rounded-[3px] outline-none " type="text" placeholder="Search"
+                  class="box-search py-4 pr-10 pl-2 w-64 h-7 rounded-[5px] outline-none text-white
+                              ">
+               <ion-icon name="search-outline"
+                  class="absolute top-0 right-0 w-5 h-[100%] cursor-pointer bg-white px-3 rounded-md"></ion-icon>
+            </div>
+         </div>
+      </nav>
+      <!-- desktop -->
+      <nav class="hidden nav xl:flex justify-around xl:h-10">
+         <ul id="list-menu" class="list-menu block xl:flex xl:space-x-9 items-center">
+         </ul>
+         <div class="group-search relative ">
+            <input class="w-[100%] lg:w-72  pl-3 h-8 mt-1 rounded-[3px] outline-none " type="text" placeholder="Search">
+            <ion-icon name="search-outline"
+               class="absolute top-1 right-0 w-5 h-8 cursor-pointer bg-white px-3 rounded-md"></ion-icon>
+         </div>
+      </nav>
+   </header>
+   <main>
+      <div class="banner">
+         <img src="../assets/Slide1.jpg" alt="bn" class="w-[100%] md:h-56">
+      </div>
+      <div id="content-main" class="container mx-auto flex flex-col justify-center items-center my-9">
+         <h1 class=" title-main text-center font-semibold text-3xl mb-4 text-orange-700">GỬI YÊU CẦU LIÊN HỆ</h1>
+         <div class="form-re">
+            <form class="form  inline-block p-6 rounded-[5px]">
+               <ul class="group-input grid grid-cols-1  md:grid-cols-2 gap-3">
+                  <li>
+                     <label class="text-xl font-medium" for="name">
+                        Họ và tên
+                        <span class="text-red-600">*</span>
+                     </label>
+                  </li>
+                  <li>
+                     <input class="w-[100%] md:w-72 pl-3 h-10 rounded-[3px] outline-none " type="text" name="name"
+                        placeholder="Nhập họ tên của bạn" required id="name">
+                  </li>
+                  <li>
+                     <label class="text-xl font-medium" for="emal">
+                        Địa chỉ Email
+                        <span class="text-red-600">*</span>
+                     </label>
+                  </li>
+                  <li>
+                     <input class="w-[100%] md:w-72 pl-3 h-10 rounded-[3px] outline-none " type="email"
+                        placeholder="Nhập Email của bạn" name="email" id="email" required>
+                  </li>
+                  <li>
+                     <label class="text-xl font-medium" for="tel">Điện thoại</label>
+                  </li>
+                  <li>
+                     <input class="w-[100%] md:w-72 pl-3 h-10 rounded-[3px] outline-none " type="tel"
+                        placeholder="Nhập số điện thoại của bạn" name="tel" id="tel">
+                  </li>
+                  <li>
+                     <label class="text-xl font-medium">Đơn vị tiếp nhận yêu cầu
+                        <span class="text-red-600">*</span>
+                     </label>
+                  </li>
+                  <li></li>
+                  <li></li>
+                  <li>
+                     <select name="" id="require" class="w-[100%] pl-3 h-10 rounded-[3px] outline-none " required>
+                        <option value="null">(Chưa chọn)</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                     </select>
+                  </li>
+                  <li>
+                     <label class="text-xl font-medium" for="title">Tiêu đề</label>
+                  </li>
+                  <li>
+                     <input class="w-[100%] md:w-72 pl-3 h-10 rounded-[3px] outline-none " type="text" name="title"
+                        placeholder="Nhập tiêu đề" id="title">
+                  </li>
+                  <li>
+                     <label class="text-xl font-medium">Nội dung
+                        <span class="text-red-600">*</span>
+                     </label>
+                  </li>
+                  <li></li>
+                  <li class=" col-span-1 md:col-span-2">
+                     <textarea cols="30" rows="7" class="w-[100%] pl-3 pt-1 rounded-[3px] outline-none " required
+                        id="content"></textarea>
+                  </li>
+               </ul>
+               <div class="group-button flex justify-evenly mt-6">
+                  <button
+                     class="button text-gray-800 hover:text-gray-900 bg-blue-300 hover:bg-blue-600 font-semibold">Gửi</button>
+                  <button class="button bg-red-300 hover:text-gray-900 text-gr hover:bg-red-600 font-semibold"
+                     id="refreshButton"> Làm lại</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </main>
+   <footer class="footer min-w-screen">
+      <div class="content-footer container md:mx-auto flex flex-col md:block items-center ">
+         <div class="group-name border-y-2 md:inline-block block mt-5 mb-4">
+            <h3 class="text-lg">TRƯỜNG ĐẠI HỌC NGOẠI NGỮ</h3>
+            <h4 class="text-base">ĐẠI HỌC QUỐC GIA HÀ NỘI</h4>
+         </div>
+         <ul>
+            <li>Địa chỉ: Đường Phạm Văn Đồng - Quận cầu giấy - Hà Nội</li>
+            <li>Tel: (+8424).3754.7269</li>
+            <li>Fax: (+8424).3754.8057</li>
+            <li>Email: dhnn@vnu.edu.vn</li>
+         </ul>
+      </div>
+   </footer>
+</body>
+<script src="./script.js"></script>
+</html>

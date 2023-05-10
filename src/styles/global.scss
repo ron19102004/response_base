@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+$color1: #153E90;
+$color2: #0E49B5;
+$color3: #54E346;
+$color4: #FFFAA4;
+$font1:'Charm', cursive;
+$font2: 'Wix Madefor Text', sans-serif;
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+   .header {
+      background-color: $color1;
+      .nav{
+         .list-menu {
+            .li {
+               padding: 5px 10px;
+               border-radius: 3px;
+               position: relative;
+               a{
+                  font-family: $font2;
+               }
+               &:hover{
+                  background-color: rgba(240, 248, 255, 0.219);
+               }
+               &::after {
+                  content: "";
+                  top: 0;
+                  right: -20px;
+                  width: 1px;
+                  height: 100%;
+                  position: absolute;
+                  background-color: $color4;
+               }
+               &:last-child{
+                  &::after{
+                     display: none;
+                  }
+               }
+            }
+         }
+         .list-menu-responsive {
+            .li{
+               padding: 15px 10px;
+               border-radius: 3px;
+               a{
+                  font-family: $font2;
+               }
+               &:hover{
+                  background-color: rgba(240, 248, 255, 0.219);
+               }
+            }
+         }
+         .group-search{
+            .box-search{
+               background-color: rgba(100, 100, 100, 0.192);
+               border: 1px solid $color4;
+            }
+         }
+      }
+   }
+#content-main {
+   .title-main{
+      font-family: $font1;
+   }
+   .form-re{
+      .form{
+         background-color: wheat;
+         .table{
+            tr{
+               td{
+                  padding: 5px;
+                  span{
+                     color: red;
+                  }
+                  .input {
+                  }
+                  .textarea{
+                     width: 100%;
+                     height: 200px;
+                  }
+               }
+            }
+         }
+         .group-button{
+            .button{
+               width: 100px;
+               height: 40px;
+               border-radius: 3px;
+            }
+         }
+      }
+   }
+}
+.footer{
+   background-color: $color1;
+   .content-footer {
+      color: $color4;
+   }
+}

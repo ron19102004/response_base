@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Charm&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #153E90;
+}
+.header .nav .list-menu .li {
+  padding: 5px 10px;
+  border-radius: 3px;
+  position: relative;
+}
+.header .nav .list-menu .li a {
+  font-family: "Wix Madefor Text", sans-serif;
+}
+.header .nav .list-menu .li:hover {
+  background-color: rgba(240, 248, 255, 0.219);
+}
+.header .nav .list-menu .li::after {
+  content: "";
+  top: 0;
+  right: -20px;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: #FFFAA4;
+}
+.header .nav .list-menu .li:last-child::after {
+  display: none;
+}
+.header .nav .list-menu-responsive .li {
+  padding: 15px 10px;
+  border-radius: 3px;
+}
+.header .nav .list-menu-responsive .li a {
+  font-family: "Wix Madefor Text", sans-serif;
+}
+.header .nav .list-menu-responsive .li:hover {
+  background-color: rgba(240, 248, 255, 0.219);
+}
+.header .nav .group-search .box-search {
+  background-color: rgba(100, 100, 100, 0.192);
+  border: 1px solid #FFFAA4;
+}
+
+#content-main .title-main {
+  font-family: "Charm", cursive;
+}
+#content-main .form-re .form {
+  background-color: wheat;
+}
+#content-main .form-re .form .table tr td {
+  padding: 5px;
+}
+#content-main .form-re .form .table tr td span {
+  color: red;
+}
+#content-main .form-re .form .table tr td .textarea {
+  width: 100%;
+  height: 200px;
+}
+#content-main .form-re .form .group-button .button {
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+}
+
+.footer {
+  background-color: #153E90;
+}
+.footer .content-footer {
+  color: #FFFAA4;
+}
+
+/*# sourceMappingURL=global.css.map */
